@@ -1,10 +1,15 @@
 import { AuthProvider } from '@/lib/auth'
-import '@/styles/globals.css'
+import { themeConfig } from '@/styles/styles'
+import { ChakraProvider } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 
+const theme = extendTheme(themeConfig)
 export default function App({ Component, pageProps }) {
   return (
-    <AuthProvider>
-      <Component {...pageProps} />
-    </AuthProvider>
+    <ChakraProvider theme={theme}>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </ChakraProvider>
   )
 }
