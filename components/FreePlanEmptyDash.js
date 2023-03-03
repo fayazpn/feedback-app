@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Text, Button } from '@chakra-ui/react'
+import { Flex, Heading, Text, Button } from '@chakra-ui/react'
 import DashboardContainer from './DashboardContainer'
 
 const FreePlanEmptyDash = () => {
@@ -7,12 +7,18 @@ const FreePlanEmptyDash = () => {
     <>
     <DashboardContainer>
 
-      <Box
+      <Flex
         width='100%'
         backgroundColor='whiteAlpha.900'
         border='1px'
         borderColor='gray.200'
-        p={5}
+        px={5}
+        py={20}
+        borderRadius="md"
+        justifyContent="center"
+        alignItems="center"
+        direction="column"
+        gap={2}
       >
         <Heading as='h5' size='md'>
           Get instant feedback to your site
@@ -21,7 +27,7 @@ const FreePlanEmptyDash = () => {
         <Button variant='solid' size='md' width='auto'>
           Upgrade now
         </Button>
-      </Box>
+      </Flex>
     </DashboardContainer>
     </>
   )
